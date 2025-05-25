@@ -5,6 +5,11 @@ import uvicorn
 
 app = FastAPI()
 
+@app.get("/")
+def root():
+    return {"message": "Threat Ledger API running"}
+
+
 # Dummy database
 feed_db = []
 
